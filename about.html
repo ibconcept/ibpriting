@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 10px;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        header {
+            background: radial-gradient(circle at 20% 0%, rgb(255, 156, 247), rgb(187, 245, 255));
+            padding: 20px;
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.3);
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        ul.main-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.main-menu li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        ul.main-menu li:first-child {
+            margin-left: 0;
+        }
+
+        ul.main-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        ul.main-menu li a:hover {
+            color: #ccc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-section,
+        .team-section,
+        .contact-section {
+            text-align: left;
+        }
+
+        .team-member {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .images {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .contact-number {
+            font-weight: bold;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            width: 100px;
+        }
+
+        .social-icons a {
+            text-decoration: none; 
+            margin: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-HjSMJSKJhH00a2kg0/LNEZbWlP3DU1hzEqL4FxE+omELg3ZteVRfF8cs1VHF+ww+T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <div ><img src="logo.PNG" alt="logo" class="logo"></div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="team-section">
+            <h2>Our Team</h2>
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img class="images" src="team-member1.jpg" alt="Team Member 1">
+                <h3>Nixon Rubia</h3>
+                <span>Designer</span>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img class="images" src="team-member2.jpg" alt="Team Member 2">
+                <h3>William  Maina</h3>
+                <span>Developer</span>
+            </div>
+            <div class="team-member">
+                <img class="images" src="team-member1.jpg" alt="Team Member 1">
+                <h3>Denis Odhiambo</h3>
+                <span>Designer</span>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>We are located in Nairobi, Ngara.</p>
+            <p>Phone: <span class="contact-number">0729301689</span>, <span class="contact-number">0719301330</span></p>
+            <!-- Social Media Icons -->
+            <div class="social-icons" style="color: cornflowerblue;">
+                <a href="index.html" class="fab fa-facebook"></a>
+                <a href="index.html" class="fab fa-twitter"></a>
+                <a href="index.html" class="fab fa-instagram"></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
