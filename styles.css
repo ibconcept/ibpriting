@@ -1,96 +1,95 @@
-
 body {
     background: radial-gradient(circle at 20% 0%, rgb(255, 156, 247), rgb(187, 245, 255));
-    margin: 0; 
+    margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-  }
+}
 
-  header { 
-
+header {
     padding: 20px;
     display: flex;
-   background-color:rgba(255, 255, 255, 0.3);  
-      justify-content: space-between;
-align-items: center;
-padding: 10px 20px; 
-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
 }
 
 .logo {
-width: 100px; /* Adjust according to your logo size */
+    width: 100px; /* Adjust according to your logo size */
 }
 
 nav {
-flex-grow: 1;
-text-align: right;
+    flex-grow: 1;
+    text-align: right;
 }
 
 ul.main-menu {
-list-style-type: none;
-margin: 0;
-padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 ul.main-menu li {
-display: inline;
-margin-left: 20px;
+    display: inline;
+    margin-left: 20px;
 }
 
 ul.main-menu li:first-child {
-margin-left: 0;
+    margin-left: 0;
 }
 
 ul.main-menu li a {
-color: #fff;
-text-decoration: none;
-font-weight: bold;
-transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 ul.main-menu li a:hover {
-color: #ccc;
+    color: #ccc;
 }
-  .container {
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    
-  }
+}
 
-  .print-categories {
+.print-categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
-    
-  }
+}
 
-  .category {
-    flex: 1 0 30%;
+.category,
+.subcategory {
+    flex: 1 0 calc(30% - 20px);
     margin: 10px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     text-align: center;
-    
-  }
-.subcategory {
-background-color: rgba(255, 255, 255, 0.8);  
-padding: 10px;
-margin: 10px 0;
-border-radius: 8px;
-display: flex;  
 }
-  @media (max-width: 768px) {
-    .category {
-      flex: 1 0 100%;
-    }
-  }
-.images {
 
-display: flex;
-width: 50vw;
-height: auto;
-border-radius: 30px;
+.subcategory {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .category,
+    .subcategory {
+        flex: 1 0 100%;
+    }
+}
+
+.images {
+    display: flex;
+    width: 50vw;
+    height: auto;
+    border-radius: 30px;
 }
