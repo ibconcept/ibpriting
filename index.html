@@ -12,16 +12,55 @@
   <style>
     body {
       background: radial-gradient(circle at 20% 0%, rgb(255, 156, 247), rgb(187, 245, 255));
-      margin: 0;
+      margin: 0; 
       font-family: Arial, sans-serif;
     }
 
-    header {
-      text-align: center;
-      padding: 20px;
-      color: #fff;
-    }
+    header { 
 
+      padding: 20px;
+      display: flex;
+     background-color:rgba(255, 255, 255, 0.3);  
+        justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; 
+  color: #fff;
+}
+
+.logo {
+  width: 100px; /* Adjust according to your logo size */
+}
+
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+ul.main-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.main-menu li {
+  display: inline;
+  margin-left: 20px;
+}
+
+ul.main-menu li:first-child {
+  margin-left: 0;
+}
+
+ul.main-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+ul.main-menu li a:hover {
+  color: #ccc;
+}
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -54,20 +93,52 @@
         flex: 1 0 100%;
       }
     }
+.images {
+
+display: flex;
+  width: 50vw;
+  height: auto;
+  border-radius: 30px;
+}
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="IB Printing Logo" width="100">
-    <h1>IB Printing</h1>
-    <p>Print Process & Print Machines</p>
-  </header>
-
+   <div><img src="logo.png" alt="IB Printing Logo" class="logo"  > </div> 
+   <nav>
+      <ul class="main-menu">
+        <li><a href="#design">Design</a></li>
+        <li><a href="#print">Print</a></li>
+        <li><a href="#branding">Branding</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    
+   </header>
+    
+ 
   <div class="container">
     <p>At IB Printing, we pride ourselves on delivering high-quality printing services and machines tailored to meet your unique needs...</p>
+    <p>Print Process & Print Machines</p>
+    
+  <div class="subcategory">
+    <h3>Logos</h3>
+    <p>Create working designs</p>
+    <figure>
+      <img src="logo_design_image.jpg" alt="Logo Design Services" class="images">
+      <figcaption>All Visual Design Services</figcaption>
+    </figure>
+  </div>
 
     <h2>Print Categories</h2>
+
+    <div class="category">
+      <h3>Logos</h3>
+      <p>Create memorable logo designs</p>
+    </div>
 
     <div class="print-categories">
       <div class="category">
@@ -85,20 +156,17 @@
         <p>Custom heatpress services</p>
       </div>
 
-      <div class="category">
-        <h3>Logos</h3>
-        <p>Create memorable logo designs</p>
-      </div>
+      
 
       <!-- Add more categories as needed -->
 <!-- Inside the category div -->
-<div class="category">
+ 
 
   <div class="subcategory">
     <h3>Large Format</h3>
     <p>Print large format designs</p>
     <figure>
-      <img src="large_format_image.jpg" alt="Large Format Printing">
+      <img src="large_format_image.png" alt="Large Format Printing">
       <figcaption>Large Format Printing</figcaption>
     </figure>
   </div>
@@ -118,15 +186,6 @@
     <figure>
       <img src="heatpress_image.jpg" alt="Heatpress Printing Services">
       <figcaption>Heatpress Printing Services</figcaption>
-    </figure>
-  </div>
-
-  <div class="subcategory">
-    <h3>Logos</h3>
-    <p>Create memorable logo designs</p>
-    <figure>
-      <img src="logo_design_image.jpg" alt="Logo Design Services">
-      <figcaption>Logo Design Services</figcaption>
     </figure>
   </div>
 
