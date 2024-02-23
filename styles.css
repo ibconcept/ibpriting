@@ -6,8 +6,11 @@ body {
 }
 
 header {
-    padding: 20px;
+    padding: 30px;
     display: flex;
+    margin: 5px;
+    box-shadow: 4px 5px 5px #ccc;
+    border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.3);
     justify-content: space-between;
     align-items: center;
@@ -88,8 +91,8 @@ ul.main-menu li a:hover {
 }
 
 .images {
-    display: flex;
     width: 50vw;
     height: auto;
+    text-align: center;
     border-radius: 30px;
 }
