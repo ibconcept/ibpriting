@@ -1,7 +1,7 @@
 body {
     background: radial-gradient(circle at 20% 0%, rgb(255, 156, 247), rgb(187, 245, 255));
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     text-align: center;
 }
 
@@ -11,7 +11,7 @@ header {
     margin: 5px;
     box-shadow: 4px 5px 5px #ccc;
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     justify-content: space-between;
     align-items: center;
     color: #fff;
@@ -20,6 +20,14 @@ header {
 .logo {
     width: 100px; /* Adjust according to your logo size */
 }
+
+.images {
+    width: 50vw;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
 
 nav {
     flex-grow: 1;
@@ -88,11 +96,12 @@ ul.main-menu li a:hover {
     .subcategory {
         flex: 1 0 100%;
     }
+    .images {
+        width: 80vw;
+        height: auto;
+        text-align: center;
+        border-radius: 30px;
+    }
 }
 
-.images {
-    width: 50vw;
-    height: auto;
-    text-align: center;
-    border-radius: 30px;
-}
+
