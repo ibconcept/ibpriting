@@ -66,12 +66,6 @@ ul.main-menu li a:hover {
     padding: 20px;
 }
 
-.print-categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-}
 
 .category,
 .subcategory {
@@ -91,6 +85,26 @@ ul.main-menu li a:hover {
     display: flex;
 }
 
+table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
 @media (max-width: 768px) {
     .category,
     .subcategory {
@@ -103,5 +117,7 @@ ul.main-menu li a:hover {
         border-radius: 30px;
     }
 }
+
+
 
 
