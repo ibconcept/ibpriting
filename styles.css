@@ -86,7 +86,7 @@ ul.main-menu li a:hover {
 }
 
 table {
-    width: 98%;
+    width: 98vw;
     border-collapse: collapse;
     margin-bottom: 20px;
   }
@@ -101,7 +101,7 @@ table {
     color: white;
   }
 
-  tr:nth-child(even) {
+  tr:nth-child(3) {
     background-color: #f2f2f2;
   }
 
