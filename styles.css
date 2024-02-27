@@ -8,7 +8,7 @@ body {
 header {
     padding: 30px;
     display: flex;
-    margin: 5px;
+    margin: 15px;
     box-shadow: 4px 5px 5px #ccc;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -75,6 +75,7 @@ ul.main-menu li a:hover {
     background-color: #fff;
     border-radius: 8px;
     text-align: center;
+    
 }
 
 .subcategory {
@@ -86,24 +87,25 @@ ul.main-menu li a:hover {
 }
 
 table {
-    width: 98vw;
+    width: 80vw;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    
   }
 
   th, td {
     padding: 12px;
-    text-align: left;
   }
 
   th {
     background-color: #4CAF50;
     color: white;
   }
-
-  tr:nth-child(3) {
+ 
+    tr  {
     background-color: #f2f2f2;
-  }
+  }  
 
 @media (max-width: 768px) {
     .category,
