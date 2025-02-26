@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IBPrinting.click: Generate mockups for your company logo on various promotional items. Upload your logo and company name.">
+    <meta name="keywords" content="mockup generator, logo mockup, promotional items, pen cap mockup, umbrella mockup, bag mockup, reflector jacket mockup, car wrap mockup, IBPrinting.click">
+    <meta name="author" content="IBPrinting.click">
+    <title>IBPrinting.click - Promotional Item Mockup Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .landing-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .landing-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .landing-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        .mockup-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .mockup-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .mockup-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .placeholder-image {
+            width: 200px;
+            height: 150px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to IBPrinting.click</h1>
+
+    <section class="landing-section">
+        <div class="landing-item">
+            <img src="pen_cap_example.jpg" alt="Pen Cap Example">
+            <p>Custom pen caps for your brand. Get your logo printed today!</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="umbrella_example.jpg" alt="Umbrella Example">
+            <p>Stay dry and promote your brand with custom umbrellas.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="bag_example.jpg" alt="Bag Example">
+            <p>Durable custom bags for your customers and employees.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="jacket_example.jpg" alt="Reflector Jacket Example">
+            <p>Increase visibility with custom reflector jackets.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="car_wrap_example.jpg" alt="Car Wrap Example">
+            <p>Turn your vehicle into a mobile billboard with a custom car wrap.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+         <div class="landing-item">
+            <img src="mug_example.jpg" alt="mug Example">
+            <p>Mugs with custom logo, for the office or as gifts.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="tshirt_example.jpg" alt="tshirt Example">
+            <p>Custom tshirts to promote your brand.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="notebook_example.jpg" alt="notebook Example">
+            <p>Notebooks with your logo, for meetings, or giveaways.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+         <div class="landing-item">
+            <img src="keychain_example.jpg" alt="keychain Example">
+            <p>Custom keychains, a great way to keep your brand in mind.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="hat_example.jpg" alt="hat Example">
+            <p>Hats with your logo, for promotional events.</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+
+    </section>
+
+    <h2>Create Your Mockups</h2>
+
+    <form id="mockupForm">
+        <label for="companyName">Company Name:</label><br>
+        <input type="text" id="companyName" name="companyName" value="IBPrinting.click" readonly><br><br>
+
+        <label for="logo">Upload Logo (Max 300KB):</label><br>
+        <input type="file" id="logo" name="logo" accept="image/*" required><br><br>
+
+        <button type="button" onclick="generateMockups()">Generate Mockups</button>
+    </form>
+
+    <div class="mockup-container" id="mockups">
+    </div>
+
+    <script>
+        function generateMockups() {
+            const companyName = document.getElementById('companyName').value;
+            const logoInput = document.getElementById('logo');
+            const logoFile = logoInput.files[0];
+            const mockupsContainer = document.getElementById('mockups');
+            mockupsContainer.innerHTML = '';
+
+            if (logoFile && logoFile.size <= 300 * 1024) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const logoDataUrl = event.target.result;
+                    const mockupItems = [
+                        { name: "Pen Cap", image: "pen_cap_placeholder.png" },
+                        { name: "Umbrella", image: "umbrella_placeholder.png" },
+                        { name: "Bag", image: "bag_placeholder.png" },
+                        { name: "Reflector Jacket", image: "jacket_placeholder.png" },
+                        { name: "Car Wrap", image: "car_wrap_placeholder.png" },
+                    ];
+
+                    mockupItems.forEach(item => {
+                        const mockupItem = document.createElement('div');
+                        mockupItem.classList.add('mockup-item');
+                        mockupItem.innerHTML = `
+                            <h3>${item.name}</h3>
+                            <div class="placeholder-image">
+                                <img src="${logoDataUrl}" alt="${item.name} Mockup" style="max-width: 150px; max-height: 100px;">
+                            </div>
+                            <img src="${item.image}" alt="${item.name} Base Image" style="max-width: 100%;">
+                            <p>${companyName}</p>
+                        `;
+                        mockupsContainer.appendChild(mockupItem);
+                    });
+                };
+                reader.readAsDataURL(logoFile);
+            } else {
+                alert("Please upload a logo file that is 300KB or less.");
+            }
+        }
+    </script>
+</body>
+</html>
