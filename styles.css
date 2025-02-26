@@ -1,21 +1,27 @@
 body {
-    background: radial-gradient(circle at 20% 0%, rgb(255, 156, 247), rgb(187, 245, 255));
+    background: radial-gradient(circle at 20% 0%, var(--primary-color), var(--secondary-color));
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
+    --primary-color: rgb(255, 156, 247);
+    --secondary-color: rgb(187, 245, 255);
+    --text-color: #fff;
+    --hover-color: #ccc;
+    --background-light: rgba(255, 255, 255, 0.3);
+    --background-medium: rgba(255, 255, 255, 0.8);
 }
 
 header {
     padding: 20px;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--background-light);
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .logo {
-    width: 100px; /* Adjust according to your logo size */
+    width: 100px;
 }
 
 nav {
@@ -39,14 +45,53 @@ ul.main-menu li:first-child {
 }
 
 ul.main-menu li a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 ul.main-menu li a:hover {
-    color: #ccc;
+    color: var(--hover-color);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.hero .cta-quote {
+    display: inline-block;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-quote:hover {
+    background-color: var(--hover-color);
 }
 
 .container {
@@ -67,13 +112,19 @@ ul.main-menu li a:hover {
     flex: 1 0 calc(30% - 20px);
     margin: 10px;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--text-color);
     border-radius: 8px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category:hover,
+.subcategory:hover {
+    transform: scale(1.05);
 }
 
 .subcategory {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--background-medium);
     padding: 10px;
     margin: 10px 0;
     border-radius: 8px;
@@ -93,3 +144,4 @@ ul.main-menu li a:hover {
     height: auto;
     border-radius: 30px;
 }
+ 
