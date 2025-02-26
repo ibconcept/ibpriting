@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="IBPrinting.click: Generate mockups for your company logo on various promotional items. Upload your logo and company name.">
-    <meta name="keywords" content="mockup generator, logo mockup, promotional items, pen cap mockup, umbrella mockup, bag mockup, reflector jacket mockup, car wrap mockup, IBPrinting.click">
+    <meta name="keywords" content="mockup generator, logo mockup, promotional items, pen, cap mockup, umbrella mockup, bag mockup, reflector jacket mockup, car wrap mockup, IBPrinting.click">
     <meta name="author" content="IBPrinting.click">
     <title>IBPrinting.click - Promotional Item Mockup Generator</title>
     <link rel="stylesheet" href="styles.css">
@@ -62,8 +62,13 @@
 
     <section class="landing-section">
         <div class="landing-item">
-            <img src="pen_cap_example.jpg" alt="Pen Cap Example">
-            <p>Custom pen caps for your brand. Get your logo printed today!</p>
+            <img src="pen_placeholder.jpg" alt="Pen Example">
+            <p>Custom pen for your brand. Get your logo printed today!</p>
+            <a href="#mockupForm">Try it Now</a>
+        </div>
+        <div class="landing-item">
+            <img src="cap_example.jpg" alt=" Cap Example">
+            <p>Custom caps for your brand. Get your logo printed today!</p>
             <a href="#mockupForm">Try it Now</a>
         </div>
         <div class="landing-item">
@@ -142,7 +147,8 @@
                 reader.onload = function(event) {
                     const logoDataUrl = event.target.result;
                     const mockupItems = [
-                        { name: "Pen Cap", image: "pen_cap_placeholder.png" },
+                        { name: "Cap", image: "cap_placeholder.png" },
+                        { name: "Pen", image: "pen_placeholder.jpg" },
                         { name: "Umbrella", image: "umbrella_placeholder.png" },
                         { name: "Bag", image: "bag_placeholder.png" },
                         { name: "Reflector Jacket", image: "jacket_placeholder.png" },
